@@ -5,6 +5,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
 import web.model.Car;
+import web.service.CarService;
 import web.service.CarServiceImpl;
 
 import java.util.List;
@@ -14,10 +15,10 @@ import java.util.List;
 public class CarController {
 
 
-private CarServiceImpl carService;
+private CarService carService;
 
     @Autowired
-    public CarController(CarServiceImpl carService) {
+    public CarController(CarService carService) {
         this.carService = carService;
     }
 
